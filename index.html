@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Layout</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/fl.ico">
+</head>
+<body>
+    <div class="header">
+        <span class="header-topic">css / layout / flexbox</span>
+    </div>
+    <div class="wrapper">
+        <span class="section">Flex Container Properties</span>
+        <div class="properties">
+            <div class="display">
+                <span class="title">display</span>
+                <span class="description">Определяет элемент как flex-контейнер, а дочерние элементы этого контейнера начинают подчиняться правилам flex-раскладки.</span>
+                <div class="example">
+                    <div class="display-1">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>display: flex;</code></span>
+                </div>
+            </div>
+            <div class="flex-direction">
+                <span class="title">flex-direction</span>
+                <span class="description">Определяет направление основной оси.</span>
+                <div class="example">
+                    <div class="flex-direction-1">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>flex-direction: row;</code></span>
+                </div>
+                <div class="example">
+                    <div class="flex-direction-2">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>flex-direction: column;</code></span>
+                </div>
+                <div class="example">
+                    <div class="flex-direction-3">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>flex-direction: row-reverse;</code></span>
+                </div>
+                <div class="example">
+                    <div class="flex-direction-4">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>flex-direction: column-reverse;</code></span>
+                </div>
+            </div>
+            <div class="flex-wrap">
+                <span class="title">flex-wrap</span>
+                <span class="description">Определяет должны ли flex-элементы переноситься в новый ряд, если они не влезают в рамки flex-контейнера.</span>
+                <div class="example">
+                    <div class="flex-wrap-1">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>flex-wrap: nowrap;</code></span>
+                </div>
+                <div class="example">
+                    <div class="flex-wrap-2">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                        <div class="flex-element">4</div>
+                        <div class="flex-element">5</div>
+                        <div class="flex-element">6</div>
+                    </div>
+                    <span class="code"><code>flex-wrap: wrap;</code></span>
+                </div>
+                <div class="example">
+                    <div class="flex-wrap-3">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                        <div class="flex-element">4</div>
+                        <div class="flex-element">5</div>
+                        <div class="flex-element">6</div>
+                    </div>
+                    <span class="code"><code>flex-wrap: wrap-reverse;</code></span>
+                </div>
+            </div>
+            <div class="flex-flow">
+                <span class="title">flex-flow</span>
+                <span class="description">Шорткат, который определяет значения двух свойств одновременно: flex-direction и flex-wrap.</span>
+                <div class="example">
+                    <div class="flex-flow-1">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                        <div class="flex-element">4</div>
+                        <div class="flex-element">5</div>
+                        <div class="flex-element">6</div>
+                    </div>
+                    <span class="code"><code>flex-flow: row-reverse wrap;</code></span>
+                </div>
+                <div class="example">
+                    <div class="flex-flow-2">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                        <div class="flex-element">4</div>
+                        <div class="flex-element">5</div>
+                        <div class="flex-element">6</div>
+                    </div>
+                    <span class="code"><code>flex-flow: column-reverse wrap-reverse;</code></span>
+                </div>
+            </div>
+            <div class="justify-content">
+                <span class="title">justify-content</span>
+                <span class="description">Определяет выравнивание flex-элементов вдоль главной оси.</span>
+                <div class="example">
+                    <div class="justify-content-1">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>justify-content: flex-start;</code></span>
+                </div>
+                <div class="example">
+                    <div class="justify-content-2">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>justify-content: flex-end;</code></span>
+                </div>
+                <div class="example">
+                    <div class="justify-content-3">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>justify-content: center;</code></span>
+                </div>
+                <div class="example">
+                    <div class="justify-content-4">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>justify-content: space-between;</code></span>
+                </div>
+                <div class="example">
+                    <div class="justify-content-5">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>justify-content: space-around;</code></span>
+                </div>
+                <div class="example">
+                    <div class="justify-content-6">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>justify-content: space-evenly;</code></span>
+                </div>
+            </div>
+            <div class="align-items">
+                <span class="title">align-items</span>
+                <span class="description">Определяет выравнивание flex-элементов вдоль поперечной оси.</span>
+                <div class="example">
+                    <div class="align-items-1">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>align-items: flex-start;</code></span>
+                </div>
+                <div class="example">
+                    <div class="align-items-2">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>align-items: flex-end;</code></span>
+                </div>
+                <div class="example">
+                    <div class="align-items-3">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>align-items: center;</code></span>
+                </div>
+                <div class="example">
+                    <div class="align-items-4">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>align-items: stretch;</code></span>
+                </div>
+                <div class="example">
+                    <div class="align-items-5">
+                        <div class="flex-element one">1</div>
+                        <div class="flex-element two">2</div>
+                        <div class="flex-element three">3</div>
+                    </div>
+                    <span class="code"><code>align-items: baseline;</code></span>
+                </div>
+            </div>
+            <div class="align-content">
+                <span class="title">align-content</span>
+                <span class="description">Определяет выравнивание рядов flex-элементов вдоль поперечной оси.</span>
+                <div class="example-list">
+                    <div class="example">
+                        <div class="align-content-1">
+                            <div class="flex-element">1</div>
+                            <div class="flex-element">2</div>
+                            <div class="flex-element">3</div>
+                            <div class="flex-element">4</div>
+                            <div class="flex-element">5</div>
+                            <div class="flex-element">6</div>
+                            <div class="flex-element">7</div>
+                            <div class="flex-element">8</div>
+                        </div>
+                        <span class="code"><code>align-content: flex-start;</code></span>
+                    </div>
+                    <div class="example">
+                        <div class="align-content-2">
+                            <div class="flex-element">1</div>
+                            <div class="flex-element">2</div>
+                            <div class="flex-element">3</div>
+                            <div class="flex-element">4</div>
+                            <div class="flex-element">5</div>
+                            <div class="flex-element">6</div>
+                            <div class="flex-element">7</div>
+                            <div class="flex-element">8</div>
+                        </div>
+                        <span class="code"><code>align-content: flex-end;</code></span>
+                    </div>
+                    <div class="example">
+                        <div class="align-content-3">
+                            <div class="flex-element">1</div>
+                            <div class="flex-element">2</div>
+                            <div class="flex-element">3</div>
+                            <div class="flex-element">4</div>
+                            <div class="flex-element">5</div>
+                            <div class="flex-element">6</div>
+                            <div class="flex-element">7</div>
+                            <div class="flex-element">8</div>
+                        </div>
+                        <span class="code"><code>align-content: center;</code></span>
+                    </div>
+                    <div class="example">
+                        <div class="align-content-4">
+                            <div class="flex-element">1</div>
+                            <div class="flex-element">2</div>
+                            <div class="flex-element">3</div>
+                            <div class="flex-element">4</div>
+                            <div class="flex-element">5</div>
+                            <div class="flex-element">6</div>
+                            <div class="flex-element">7</div>
+                            <div class="flex-element">8</div>
+                        </div>
+                        <span class="code"><code> align-content: stretch;</code></span>
+                    </div>
+                    <div class="example">
+                        <div class="align-content-5">
+                            <div class="flex-element">1</div>
+                            <div class="flex-element">2</div>
+                            <div class="flex-element">3</div>
+                            <div class="flex-element">4</div>
+                            <div class="flex-element">5</div>
+                            <div class="flex-element">6</div>
+                            <div class="flex-element">7</div>
+                            <div class="flex-element">8</div>
+                        </div>
+                        <span class="code"><code>align-content: space-between;</code></span>
+                    </div>
+                    <div class="example">
+                        <div class="align-content-6">
+                            <div class="flex-element">1</div>
+                            <div class="flex-element">2</div>
+                            <div class="flex-element">3</div>
+                            <div class="flex-element">4</div>
+                            <div class="flex-element">5</div>
+                            <div class="flex-element">6</div>
+                            <div class="flex-element">7</div>
+                            <div class="flex-element">8</div>
+                        </div>
+                        <span class="code"><code> align-content: space-around;</code></span>
+                    </div>
+                    <div class="example">
+                        <div class="align-content-7">
+                            <div class="flex-element">1</div>
+                            <div class="flex-element">2</div>
+                            <div class="flex-element">3</div>
+                            <div class="flex-element">4</div>
+                            <div class="flex-element">5</div>
+                            <div class="flex-element">6</div>
+                            <div class="flex-element">7</div>
+                            <div class="flex-element">8</div>
+                        </div>
+                        <span class="code"><code>align-content: space-evenly;</code></span>
+                    </div>
+                </div>
+            </div>
+            <div class="gap">
+                <span class="title">gap</span>
+                <span class="description">Шорткат, который определяет 2 свойства одновременно: row-gap и column-gap.</span>
+                <div class="example">
+                    <div class="gap-1">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                    </div>
+                    <span class="code"><code>gap: 8px;</code></span>
+                </div>
+                <div class="example">
+                    <div class="gap-2">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">2</div>
+                        <div class="flex-element">3</div>
+                        <div class="flex-element">4</div>
+                        <div class="flex-element">5</div>
+                        <div class="flex-element">6</div>
+                    </div>
+                    <span class="code"><code>gap: 12px 4px;</code></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <span class="section">Flex Element Properties</span>
+        <div class="properties">
+            <div class="order">
+                <span class="title">order</span>
+                <span class="description">Определяет порядок отображения flex-элемента относительно других flex-элементов.</span>
+                <div class="example">
+                    <div class="order-1">
+                        <div class="flex-element edit-element plus-two">2</div>
+                        <div class="flex-element edit-element minus-two">-2</div>
+                        <div class="flex-element edit-element zero">0</div>
+                        <div class="flex-element edit-element minus-one">-1</div>
+                        <div class="flex-element edit-element plus-one">1</div>
+                    </div>
+                    <span class="code"><code>order: -2;<br>order: -1;<br>order: 0;<br>order: 1;<br>order: 2;</code></span>
+                </div>
+            </div>
+            <div class="flex-grow">
+                <span class="title">flex-grow</span>
+                <span class="description">Определяет насколько flex-элемент может увеличиваться в размере относительно других flex-элементов.</span>
+                <div class="example">
+                    <div class="flex-grow-1">
+                        <div class="flex-element edit-element two">2</div>
+                        <div class="flex-element">0</div>
+                        <div class="flex-element edit-element one">1</div>
+                    </div>
+                    <span class="code"><code>flex-grow: 2;<br>flex-grow: 1;</code></span>
+                </div>
+                <div class="example">
+                    <div class="flex-grow-2">
+                        <div class="flex-element edit-element one">1</div>
+                        <div class="flex-element edit-element two">2</div>
+                        <div class="flex-element edit-element three">3</div>
+                    </div>
+                    <span class="code"><code>flex-grow: 1;<br>flex-grow: 2;<br>flex-grow: 3;</code></span>
+                </div>
+            </div>
+            <div class="flex-shrink">
+                <span class="title">flex-shrink</span>
+                <span class="description">Определяет насколько flex-элемент может уменьшаться в размере относительно других flex-элементов.</span>
+                <div class="example">
+                    <div class="flex-shrink-1">
+                        <div class="flex-element">1</div>
+                        <div class="flex-element">1</div>
+                        <div class="flex-element edit-element two">2</div>
+                    </div>
+                    <span class="code"><code>flex-shrink: 2;</code></span>
+                </div>
+            </div>
+            <div class="flex-basis">
+                <span class="title">flex-basis</span>
+                <span class="description">Определяет начальный основной размер flex-элемента перед применением свойств flex-grow и flex-shrink.</span>
+                <div class="example">
+                    <div class="flex-basis-1">
+                        <div class="flex-element edit-element"></div>
+                        <div class="flex-element"></div>
+                        <div class="flex-element"></div>
+                    </div>
+                    <span class="code"><code>flex-basis: 100px;</code></span>
+                </div>
+                <div class="example">
+                    <div class="flex-basis-2">
+                        <div class="flex-element"></div>
+                        <div class="flex-element edit-element"></div>
+                        <div class="flex-element"></div>
+                    </div>
+                    <span class="code"><code>flex-basis: 50%;</code></span>
+                </div>
+                <div class="example">
+                    <div class="flex-basis-3">
+                        <div class="flex-element"></div>
+                        <div class="flex-element"></div>
+                        <div class="flex-element edit-element"></div>
+                    </div>
+                    <span class="code"><code>flex-basis: auto;</code></span>
+                </div>
+            </div>
+            <div class="flex">
+                <span class="title">flex</span>
+                <span class="description">Шорткат, который определяет значение трех свойств одновременно: flex-grow, flex-shrink, flex-basis.</span>
+                <div class="example">
+                    <div class="flex-1">
+                        <div class="flex-element edit-element"></div>
+                        <div class="flex-element"></div>
+                        <div class="flex-element"></div>
+                    </div>
+                    <span class="code"><code>flex: 1;</code></span>
+                </div>
+                <div class="example">
+                    <div class="flex-2">
+                        <div class="flex-element edit-element"></div>
+                        <div class="flex-element"></div>
+                        <div class="flex-element"></div>
+                    </div>
+                    <span class="code"><code>flex: 0 2 100px;</code></span>
+                </div>
+            </div>
+            <div class="align-self">
+                <span class="title">align-self</span>
+                <span class="description">Переопределяет выравнивание flex-элемента вдоль поперечной оси.</span>
+                <div class="example">
+                    <div class="align-self-1">
+                        <div class="flex-element"></div>
+                        <div class="flex-element edit-element"></div>
+                        <div class="flex-element"></div>
+                        <div class="flex-element edit-element"></div>
+                        <div class="flex-element"></div>
+                    </div>
+                    <span class="code"><code>align-self: flex-end;</code></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="caption">
+            <span class="caption-title">Developed and<br>Designed by<br>Matthew Zdanevich</span>
+        </div>
+        <div class="contacts">
+            <span class="section-title">Contacts:</span>
+            <ul>
+                <li><a href="https://github.com/MatthewZdanevich">GitHub</a></li>
+            </ul>
+        </div>
+        <div class="credits">
+            <span class="section-title">Credits:</span>
+            <ul>
+                <li>CSS Flexbox Layout</li>
+                <li>September 2024</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
